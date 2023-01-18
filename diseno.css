@@ -1,0 +1,125 @@
+body{
+	background: #C4C0BF;
+	margin: 0;
+}
+
+header{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: baseline;
+	gap: 15px 80px;
+}
+
+#tituloIndex{
+	font-size: 20px;
+	display: flex;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	
+}
+
+.botones{
+	height: 60%;
+	display: inline-grid;
+	margin-top: 15px;
+	justify-items: center;
+	align-content: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+nav a{
+	font-family: sans-serif;
+	color: black;
+	text-decoration: none;
+}
+nav button:hover{
+	color: black;
+	border-style: double;
+	border-color: goldenrod;
+	border-width: 5px;
+}
+
+input, .btn-tipoA{
+	border-radius: 20px;
+	background-color: gray;
+}
+
+input, .btn-tipoB{
+	border-radius: 20px;
+	background-color: white;
+}
+
+.inicio, .addWord{
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+.agregar, .palabra-nueva{
+	display: none;
+}
+
+.areaJuego{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 3%;
+}
+
+.areaJuego div{
+	display: flex;
+	
+}
+
+.adivinaEsto-guiones{
+	display: flex;
+	order: 1;
+	border-color: purple;
+	width: 35%;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.canvas-horca {
+	display: flex;
+	justify-content: center;
+	order: 0;
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: floralwhite;
+	border-color: #B9B5B2;
+	border-style: solid;
+	border-radius: 5%;
+}
+
+.firma {
+	text-align: center;
+	background: linear-gradient(papayawhip 15%, black 90%);
+	margin: 0;
+	height: 8%;
+	font-size: 13px;
+	font-family: sans-serif;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-weight: bold;
+	color: white;
+}
+
+/*Diseno contenido juego*/
+
+#dibujeAqui{
+	margin-top: 148px;
+	margin-left: 30%;
+	transform: translateX(300px);
+	display: inline;
+}
+
+/*https://www.youtube.com/watch?v=4Nn4pay15IQ
+https://www.youtube.com/watch?v=DmYHkk_7pXc
+*/

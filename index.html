@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>¿Jugamos al ahorcado?</title>
+		<link rel="stylesheet" href="diseno.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1> <img src="./img/logo.png" alt="Logo de alura"></h1>
+				<h1 id="tituloIndex">¡Adivinas o te ahogas!</h1>
+			</header>
+			<div class="botonesInicio ocultar">
+				<a href= "#jugar">
+					<input type="submit" id="comenzar-juego" class="btn-inicio btn-tipoA" onclick="iniciarJuego()" value="Iniciar juego"></input>
+				</a>
+				<a href="#nuevaPalabra">
+					<input type="submit" id="addWord" class="addWord btn-tipoB" onclick="ingresarPalabra()" value="Agregar palabra" style="display: none"><a href="#nuevaPalabra"></a></input>	
+				</a>
+			</div>
+			<container class="areaJuego aparecer" id="jugar">
+				<div>
+					<canvas width="500px" height="600px" class="canvas-horca" id="horca"></canvas>
+				</div>
+				<div class="adivinaEsto-guiones" data-guiones>
+					<p id="campoGuiones" ></p>
+				</div>
+				<button class="inicia-juego btn-tipoA" style="display: none">Nuevo juego</button>
+				<button class="desistir btn-tipoB" style="display: none">Desistir</button>
+			</container>		
+			<div class="agregar palabra-nueva" id="nuevaPalabra">
+				<form>
+					<label>Ingresa tu nueva palabra</label>
+					<input placeholder="Escribe aquí tu palabra sin tildes" type="text" required></input>
+				</form>
+				<button class="guarda--palabra btn-tipoA">Guardar e iniciar</button>
+				<button class="cancelar--nuevaPalabra btn-tipoB">Cancelar</button>
+			</div>	
+		</main>
+		<script src="./Operacion/cerebro.js"></script>
+		<script src="./Operacion/canvas.js"></script>
+	</body>
+	<footer>
+		<div class="firma">
+			<p>® Alura Latam - ONE Next Education</p>
+			<p>By Leidy Johanna Perez</p>	
+		</div>
+	</footer>
+</html>
