@@ -20,11 +20,20 @@
 				</a>
 			</div>
 			<container class="areaJuego aparecer" id="jugar">
-				<div>
-					<canvas width="500px" height="600px" class="canvas-horca" id="horca"></canvas>
+				<div class="canvasContainer">
+					<div>
+						<canvas width="500px" height="600px" class="canvas-horca" id="horca"></canvas>
+					</div>
 				</div>
-				<div class="adivinaEsto-guiones" data-guiones>
-					<p id="campoGuiones" ></p>
+				<div class="adivinaEsto-guiones" id="espaciodeJuego" data-guiones>
+					<div class="validaLetras-guiones">
+						<label class ="etiqueta-adivinaEsto" id="labelPalabraOculta"> Palabra Oculta:</label>
+						<p class="campoGuiones" id="campoGuiones" ></p>
+						<label class ="etiqueta-adivinaEsto" id="labelLetras"> Aqui van tus letras:</label>
+						<input class="letrasCorrectas" id="ingresoLetraOk"></input>
+						<label class ="etiqueta-adivinaEsto" id="etiquetaLetrasMal"> Letras Incorrectas:</label>
+						<p class="campoGuiones" id="guionesLetrasMal"></p>
+					</div>
 				</div>
 				<button class="inicia-juego btn-tipoA" style="display: none">Nuevo juego</button>
 				<button class="desistir btn-tipoB" style="display: none">Desistir</button>
