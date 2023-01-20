@@ -20,16 +20,6 @@ header{
 	
 }
 
-.botones{
-	height: 60%;
-	display: inline-grid;
-	margin-top: 15px;
-	justify-items: center;
-	align-content: center;
-	margin-left: 50%;
-	transform: translateX(-50%);
-}
-
 nav a{
 	font-family: sans-serif;
 	color: black;
@@ -44,13 +34,37 @@ nav button:hover{
 
 input, .btn-tipoA{
 	border-radius: 20px;
-	background-color: gray;
+	background-color: #14779e;
 }
 
 input, .btn-tipoB{
 	border-radius: 20px;
 	background-color: white;
 }
+
+.btn-inicio{
+	display: flex;
+	border-color: black;
+	border-style: solid;
+	text-transform: uppercase;
+	font-size: large;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	
+	
+	
+}
+
+/*
+.botones{
+	height: 60%;
+	display: inline-grid;
+	margin-top: 15px;
+	justify-items: center;
+	align-content: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}*/
 
 .inicio, .addWord{
 	padding: 10px 15px;
@@ -70,6 +84,10 @@ input, .btn-tipoB{
 	margin: 3%;
 }
 
+.canvasContainer{
+	height: 60vh;
+}
+
 .areaJuego div{
 	display: flex;
 	
@@ -78,13 +96,29 @@ input, .btn-tipoB{
 .adivinaEsto-guiones{
 	display: flex;
 	order: 1;
-	border-color: purple;
 	width: 35%;
 	text-transform: uppercase;
-	font-size: 50px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.campoGuiones{
+	display: flex;
+	font-size: 50px;
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif	;
+}
+
+.etiqueta-adivinaEsto{
+	font-size: 20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif	;
+
+}
+
+.validaLetras-guiones{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 
 .canvas-horca {
 	display: flex;
