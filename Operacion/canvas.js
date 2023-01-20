@@ -30,11 +30,19 @@ function dibujarGuiones(){
 	let anchura = 400/palabraSecreta.length;
 	for (let i = 0; i < palabraSecreta.length; i++){
 
-		tablero.moveTo(50 + (anchura*i), 500);
-		tablero.lineTo(100 + (anchura*i), 500);
+		tablero.moveTo(50 + (anchura*i), 550);
+		tablero.lineTo(100 + (anchura*i), 550);
 	}
 	tablero.stroke();
 	tablero.closePath();
+}
+
+function etiquetaLetras(){
+	tablero.font = " bold 20px Lucida Sans";
+	tablero.fillStyle = "black";
+	tablero.textAlign = "center";
+	tablero.textBaseline = "middle";
+	tablero.fillText("PALABRA OCULTA", 250, 450);
 }
 
 
