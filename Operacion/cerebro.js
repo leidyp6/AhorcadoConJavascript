@@ -9,7 +9,7 @@ var palabraSecreta = "";
 //Array para almacenar letras
 let guionesPalabraSecreta;
 let letraIn = [];
-let intentos = 6;
+let intentos = 7;
 let listaLetrasMal = document.getElementById("letraMal");
 let aciertos = 0;
 
@@ -75,15 +75,15 @@ function iniciarJuego() {
 			
 		} else {
 			intentos--;
-			console.log(intentos);
+			console.log("contador de intentos " + intentos);
+			dibujarVictima();
 			if (intentos > 0) {
 				document.getElementById("conteoIntentos").innerHTML = "Intenta de nuevo, te quedan " + intentos + " intentos";		
 				conjuntoLetrasMal.push(letra);
 				listaLetrasMal.innerHTML = `<p>${conjuntoLetrasMal}</p>`;
 				} else if (intentos <= 0) {
-					//document.getElementById("conteoIntentos").innerHTML = "FIN DEL JUEGO";
 					alert ("Perdiste");
-					}
+				}
 		
 				}
 		
