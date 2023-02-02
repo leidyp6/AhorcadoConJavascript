@@ -6,7 +6,6 @@
 	<title>¿Jugamos al ahorcado?</title>
 	<link rel="stylesheet" href="diseno.css">
 </head>
-
 <body>
 	<main>
 		<header>
@@ -14,19 +13,22 @@
 			<h1 id="tituloIndex">¡Adivinas o te ahogas!</h1>
 		</header>
 		<container class="areaJuego aparecer" id="jugar">
-			<div class="botonesInicio ocultar">
-				<a href="#jugar">
-					<input type="submit" id="comenzar-juego" class="btn-inicio btn-tipoA" onclick="iniciarJuego()"
-						value="Iniciar juego"></input>
-				</a>
-			</div>
 			<div class="canvasContainer">
 				<canvas width="1080px" height="780px" class="canvas-horca" id="horca"></canvas>
 			</div>
 			<div class="adivinaContainer" id="adivinaContainer" data-guiones>
-				<p class="conteoIntentos" id="conteoIntentos"></p>
-				<label class="etiqueta-adivinaEsto" id="labelPalabraOculta"> letra Incorrecta:</label>
-				<h2 class="letraMal" id="letraMal"></h2>
+				<a href="#jugar">
+					<input type="submit" id="comenzar-juego" class="btn-inicio btn-tipoA" onclick="iniciarJuego()"
+						value="Iniciar juego"></input>
+				</a>
+				<div class="accionesJuego" id="accionesJuego">
+					<label class="ganaste" id="ganaste"></label>
+					<p class="conteoIntentos" id="conteoIntentos"></p>
+					<label class="etiqueta-adivinaEsto" id="labelPalabraOculta"> letras Incorrectas:</label>
+					<h2 class="letraMal" id="letraMal"></h2>
+					<h2 class="letraMal" id="campoGuiones"></h2>
+				</div>
+				
 			</div>
 		</container>
 	</main>
