@@ -9,11 +9,12 @@ var palabraSecreta = "";
 //Array para almacenar letras
 let guionesPalabraSecreta;
 let letraIn = [];
-let intentos = 8;
+let intentos = 6;
 let listaLetrasMal = document.getElementById("letraMal");
+let aciertos = 0;
 
 function ocultarElementos() {
-	document.getElementById("adivinaContainer").style.display = "none";
+	document.getElementById("accionesJuego").style.display = "none";
 }
 
 ocultarElementos();
@@ -38,35 +39,54 @@ function comprobarSiEsLetra(key) {
 	}
 }
 
+function letrasPalabraOculta(){
+	const guionesPalabraSecreta = palabraSecreta.replace(/./g, "_");
+	//document.getElementById("campoGuiones").innerHTML = guionesPalabraSecreta;
+	return guionesPalabraSecreta;
+}
+
 function iniciarJuego() {
-	document.getElementById("comenzar-juego").style.display = "flex"; //"none";
-	document.getElementById("adivinaContainer").style.display = "flex";
+	document.getElementById("comenzar-juego").style.display = "none";
+	document.getElementById("accionesJuego").style.display = "flex";
 	document.getElementById("horca").style.display = "flex";
 	elegirPalabraSecreta();
 	dibujarCanvas();
+	dibujarHorca();
+	
 	etiquetaLetras();
 	dibujarGuiones();
-
+	
 	document.onkeydown = (e) => {
 		let letra = e.key.toUpperCase();
 		if (comprobarSiEsLetra(letra) && palabraSecreta.includes(letra)) {
 			for (let i = 0; i < palabraSecreta.length; i++) {
 				if (palabraSecreta[i] === letra) {
 					agregaLetrasOk(i);
+					letraIn.push(letra);
+				} 
+				if((letrasPalabraOculta()).length === letraIn.length){
+					document.getElementById("ganaste").innerHTML = "Ganaste";
+					document.getElementById("labelPalabraOculta").style.display = "none";
+					document.getElementById("letraMal").style.display = "none";
+					document.getElementById("conteoIntentos").style.display = "none";
+					document.getElementById("comenzar-juego").style.display = "flex";
 				}
 			}
+			
 		} else {
 			intentos--;
+			console.log(intentos);
 			if (intentos > 0) {
 				document.getElementById("conteoIntentos").innerHTML = "Intenta de nuevo, te quedan " + intentos + " intentos";		
 				conjuntoLetrasMal.push(letra);
 				listaLetrasMal.innerHTML = `<p>${conjuntoLetrasMal}</p>`;
 				} else if (intentos <= 0) {
-					document.getElementById("conteoIntentos").innerHTML = "FIN DEL JUEGO";
-					
+					//document.getElementById("conteoIntentos").innerHTML = "FIN DEL JUEGO";
+					alert ("Perdiste");
 					}
 		
 				}
+		
 		}
-
+	
 }
