@@ -1,6 +1,6 @@
 body{
 	position: relative;
-	height: 90%;
+	height: 70%;
 	margin: 0;
 	padding: 0;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -74,17 +74,27 @@ body{
 .aciertos{
 	font-size: 20px;
 	margin: 0;
+	text-align: center;
+}
+
+.conteoIntentos{
+	color: #E76C11;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 .perdiste{
-	font-size: 1.5em;
-	animation: zoomIn 1em ease-out;
+	font-size: 18 px;
+	animation: zoomIn 15px ease-in;
+	text-align: center;
 }
 
 .mostrarLetrasMal{
 	font-size: 20px;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif	;
 	font-weight: bold;
+	text-align: center;
 	margin: 0;
 }
 
@@ -122,6 +132,7 @@ body{
 .ganaste{
 	font-size: 3em;
 	animation: zoomIn 1em ease-out;
+	text-align: center;
 }
 
 .verde{

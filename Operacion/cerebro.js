@@ -53,6 +53,13 @@ function comprobarSiEsLetra(key) {
 	}
 }
 
+function validaGanador(letra){
+	letraIn.push(letra.toUpperCase());
+	if (letraIn.length == palabraSecreta.length){
+		
+	}
+}
+
 function letrasPalabraOculta() {
 	const guionesPalabraSecreta = palabraSecreta.replace(/./g, "_");
 	return guionesPalabraSecreta;
@@ -90,6 +97,7 @@ function iniciarJuego() {
 					document.getElementById("aciertos").innerHTML = "¡Felicidades, ganaste!";
 					document.getElementById("aciertos").className += "ganaste verde";
 					document.getElementById("conteoIntentos").innerHTML = "";
+					setTimeout( reiniciar , 2000);
 				}
 			}
 		} else {
