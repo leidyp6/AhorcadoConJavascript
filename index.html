@@ -6,30 +6,26 @@
 	<title>¿Jugamos al ahorcado?</title>
 	<link rel="stylesheet" href="diseno.css">
 </head>
+
 <body>
 	<main>
-		<header>
-			<h1> <img src="./img/logo.png" alt="Logo de alura"></h1>
-			<h1 id="tituloIndex">¡Adivinas o te ahogas!</h1>
-		</header>
-		<container class="areaJuego aparecer" id="jugar">
+		<div class="home-btn" id="home-btn">
+			<button class="btn-inicia-juego disenoAzul" id="comenzar-juego" onclick="iniciarJuego()">Iniciar juego</button>
+		</div>
+		<container class="areaJuego-aparecer" id="jugar">
 			<div class="canvasContainer">
 				<canvas width="1080px" height="780px" class="canvas-horca" id="horca"></canvas>
-			</div>
-			<div class="adivinaContainer" id="adivinaContainer" data-guiones>
-				<a href="#jugar">
-					<input type="submit" id="comenzar-juego" class="btn-inicio btn-tipoA" onclick="iniciarJuego()"
-						value="Iniciar juego"></input>
-				</a>
-				<div class="accionesJuego" id="accionesJuego">
-					<label class="ganaste" id="ganaste"></label>
-					<p class="conteoIntentos" id="conteoIntentos"></p>
-					<label class="etiqueta-adivinaEsto" id="labelPalabraOculta"> letras Incorrectas:</label>
-					<h2 class="letraMal" id="letraMal"></h2>
-					<h2 class="letraMal" id="campoGuiones"></h2>
+				<div class="botonesJuego" id="botonesJuego">
+					<button class="nuevoJuego disenoAzul" id="nuevoJuego" >Nuevo Juego</button>
+					<button class="btn-salir disenoBlanco" id="btn-salir" onclick="reiniciar()">Salir</button>
 				</div>
-				
 			</div>
+			<container class="conteoContainer" id="conteoContainer" data-guiones>
+				<h2 class="aciertos" id="aciertos"></h2>
+				<p class="conteoIntentos" id="conteoIntentos"></p>
+				<h2 class="mostrarLetrasMal" id="mostrarLetrasMal">Letras Incorrectas</h2>
+				<h2 class="letraMal" id="letraMal"></h2>
+			</container>
 		</container>
 	</main>
 	<script src="./Operacion/cerebro.js"></script>

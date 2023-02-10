@@ -172,7 +172,7 @@ function piernaDer(){
 	tablero.closePath();
 }
 
-function dibujarVictima(){
+function dibujarVictima(intentos){
 	if(intentos == 6){
 		cuerda();
 	} else if (intentos == 5){

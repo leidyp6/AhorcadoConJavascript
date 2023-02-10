@@ -1,40 +1,40 @@
 body{
-	background-color: whitesmoke;
+	position: relative;
+	height: 90%;
 	margin: 0;
+	padding: 0;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
 }
 
-header{
-	width: 100%;
-	height: 5%;
+.btn-inicia-juego{
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
-	align-items: baseline;
-	gap: 15px 80px;
+	align-items: flex-start;
+	position:static;
 }
 
-#tituloIndex{
-	font-size: 20px;
-	display: flex;
-	font-family: sans-serif;
+.disenoAzul{
+	border-color: black;
+	border-style: solid;
 	text-transform: uppercase;
-	
+	font-size: 1.3em;
+	font-weight: bold;
+	border-radius: 20px;
+	background-color: #14779e;
 }
 
-nav a{
-	font-family: sans-serif;
-	color: black;
-	text-decoration: none;
-}
-nav button:hover{
-	color: black;
-	border-style: double;
-	border-color: goldenrod;
-	border-width: 5px;
+.disenoBlanco{
+	border-color: black;
+	border-style: solid;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	border-radius: 20px;
+	background-color: white;
 }
 
-.areaJuego{
+.areaJuego-aparecer{
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -42,78 +42,62 @@ nav button:hover{
 	justify-content: center;
 }
 
-.botonesInicio {
-	width: 20%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-input, .btn-tipoA{
-	border-radius: 20px;
-	background-color: #14779e;
-}
-
-input, .btn-tipoB{
-	border-radius: 20px;
-	background-color: white;
-}
-
-.btn-inicio{
-	display: flex;
-	flex-direction: row;
-	border-color: black;
-	border-style: solid;
-	text-transform: uppercase;
-	font-size: 1.8em;
-	font-weight: bold;
-}
-
-.canvasContainer{
-	height: 60%;
-	display: flex;
-}
-
 .canvas-horca {
 	background-color: whitesmoke;
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-.accionesJuego{
+.botonesJuego{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: static;
+	height: 2rem;
+}
+
+.conteoContainer{
 	display: flex;
 	flex-direction: column;
-	width: 50%;
 	text-transform: uppercase;
+	width: 30%;
 	align-items: center;
-	font-size: 30px;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
 }
 
-.ganaste{
-	color: #3CE823;
-	font-size: 3em;
+.aciertos{
+	font-size: 20px;
+	margin: 0;
 }
 
-.conteoIntentos{
-	text-transform: none;
-	text-decoration: seashell;
-	color: red;
+.perdiste{
+	font-size: 1.5em;
+	animation: zoomIn 1em ease-out;
 }
 
-.etiqueta-adivinaEsto{
+.mostrarLetrasMal{
 	font-size: 20px;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif	;
 	font-weight: bold;
+	margin: 0;
 }
 
 .letraMal{
 	display: flex;
-	font-size: 50px;
+	font-size: 25px;
+	color: darkred;
 	margin: 0;
 	margin-bottom: 10px;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif	;
+	margin: 0;
 }
+
 
 .firma {
 	text-align: center;
@@ -125,6 +109,27 @@ input, .btn-tipoB{
 	padding-top: 10px;
 	padding-bottom: 15px;
 	font-weight: bold;
+}
+
+.ocultar{
+	display: none;
+}
+
+.mostrar{
+	display: flex;
+}
+
+.ganaste{
+	font-size: 3em;
+	animation: zoomIn 1em ease-out;
+}
+
+.verde{
+	color: #3CE823;
+}
+
+.rojo{
+	color: red;
 }
 
 /*Diseno contenido juego*/
