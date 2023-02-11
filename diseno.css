@@ -7,11 +7,27 @@ body{
 	box-sizing: border-box;
 }
 
-.btn-inicia-juego{
+.home-btn {
 	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	position: absolute;
+	left: 15rem;
+}
+
+.btn-inicia-juego{
 	flex-direction: row;
 	align-items: flex-start;
-	position:static;
+	width: 300px;
+	padding: 25px;
+	line-height: 22px;
+	
+	position: absolute;
+	width: 250px;
+	height: 90px;
+	top: 15rem;
+	left: 15rem;
 }
 
 .disenoAzul{
@@ -56,8 +72,12 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	position: static;
+	align-content: space-between;
 	height: 2rem;
+}
+
+h2{
+	text-align: center;
 }
 
 .conteoContainer{
@@ -75,6 +95,7 @@ body{
 	font-size: 20px;
 	margin: 0;
 	text-align: center;
+	align-items: center;
 }
 
 .conteoIntentos{
