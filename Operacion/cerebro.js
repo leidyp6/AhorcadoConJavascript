@@ -1,6 +1,6 @@
 // VARIABLES
-let botonNuevoJuego = document.getElementById("nuevoJuego").style.display = "none";
-let botonSalir = document.getElementById("btn-salir").style.display = "none";
+let botonNuevoJuego = document.getElementById("nuevoJuego");
+let botonSalir = document.getElementById("btn-salir");
 let mostrarCanvas = document.getElementById("horca");
 let nuevoJuego = document.getElementById("nuevoJuego");
 
@@ -24,6 +24,8 @@ let tecla = document.onkeydown;
 function mostrarHome() {
 	mostrarCanvas.style.display = "flex";
 	document.getElementById("conteoContainer").style.display = "none";
+	botonNuevoJuego.style.display = "none";
+	botonSalir.style.display = "none";
 }
 
 mostrarHome();
@@ -64,14 +66,6 @@ function letrasPalabraOculta() {
 	const guionesPalabraSecreta = palabraSecreta.replace(/./g, "_");
 	return guionesPalabraSecreta;
 }
-//revisar empezar nuevo Juego
-function empezarNuevo() {
-	document.getElementById("letraMal").innerHTML = "";
-	document.getElementById("conteoIntentos").innerHTML = "";
-	document.getElementById("mostrarLetrasMal").innerHTML = "";
-	document.getElementById("aciertos").innerHTML = "";
-	iniciarJuego();
-}
 
 function iniciarJuego() {
 	document.getElementById("comenzar-juego").style.display = "none";
@@ -97,7 +91,7 @@ function iniciarJuego() {
 					document.getElementById("aciertos").innerHTML = "¡Felicidades, ganaste!";
 					document.getElementById("aciertos").className += "ganaste verde";
 					document.getElementById("conteoIntentos").innerHTML = "";
-					setTimeout( reiniciar , 2000);
+					//setTimeout( reiniciar , 2000);
 				}
 			}
 		} else {
