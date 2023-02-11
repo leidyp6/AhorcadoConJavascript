@@ -72,12 +72,25 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	align-content: space-between;
+	justify-content: center;
+	align-content: space-around;
 	height: 2rem;
+
 }
 
-h2{
-	text-align: center;
+.nuevoJuego {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	margin: 30px;
+}
+
+.btn-salir {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	margin: 30px;
+	
 }
 
 .conteoContainer{
